@@ -4,6 +4,8 @@ createApp({
     data() {
         return {
             diskList: [],
+            selectedDisk: {},
+            showOverlay: false,
 
         }
     },
@@ -15,5 +17,18 @@ createApp({
             console.log(this.diskList)
         })
     },
+
+    methods: {
+        showDiskDetails(index) {
+            axios.get('./server.php?discIndex=' + index).then(res => {
+                this.selectedDisk = res.data[index];
+                this.showOverlay = true;
+            });
+        },
+
+        closeOverlay() {
+            this.showOverlay = false;
+        },
+    }
 
 }).mount('#app');

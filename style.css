@@ -1,0 +1,35 @@
+.disk-container {
+    width: 220px;
+}
+
+
+.disk-image {
+    width: 100%;
+
+}
+
+.overlay {
+    position: fixed;
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.653);
+    color: white;
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay-content {
+    position: relative;
+    padding: 50px;
+}
+
+.overlay-close {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    cursor: pointer;
+}
