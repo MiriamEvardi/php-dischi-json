@@ -4,7 +4,7 @@ createApp({
     data() {
         return {
             diskList: [],
-            selectedDisk: {},
+            selectedDisk: [],
             showOverlay: false,
         }
     },
@@ -13,15 +13,15 @@ createApp({
 
         axios.get('./server.php').then(res => {
             this.diskList = res.data;
-            console.log(this.diskList)
         })
     },
 
     methods: {
-        showDiskDetails(index) {
-            axios.get('./server.php?discIndex=' + index).then(res => {
-                this.selectedDisk = res.data[index];
+        showDiskDetails(discIndex) {
+            axios.get('./server.php').then(res => {
+                this.selectedDisk = res.data[discIndex];
                 this.showOverlay = true;
+                console.log(this.selectedDisk)
             });
         },
 
