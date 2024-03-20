@@ -6,7 +6,6 @@ createApp({
             diskList: [],
             selectedDisk: {},
             showOverlay: false,
-
         }
     },
 
