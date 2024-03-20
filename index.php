@@ -27,8 +27,7 @@
 
             <ul class="list-unstyled row row-cols-md-3 justify-content-center">
                 <li v-for="(disk, index) in diskList" class="mb-5" @click="showDiskDetails(index)">
-                    <div class="rounded-2 d-flex flex-column justify-content-center align-items-center mx-5 pt-4" style="background-color: red;
-          ">
+                    <div class="rounded-2 d-flex flex-column justify-content-center align-items-center mx-5 pt-4" style="background-color: red">
                         <div class="disk-container">
                             <img :src="disk.poster" :alt="disk.title" class="disk-image">
                         </div>
